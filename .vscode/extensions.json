@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "xabikos.javascriptsn",
+    "simonsiefke.svg-preview",
+    "stylelint.vscode-stylelint",
+    "wayou.vscode-todo-highlight",
+    "thammami01.react-ts-code-snippets",
+    "vivaxy.vscode-conventional-commits",
+    "streetsidesoftware.code-spell-checker",
+    "styled-components.vscode-styled-components",
+    //INFO: reqired for code formatting
+    "rvest.vs-code-prettier-eslint",
+    //INFO: required for code linting
+    "dbaeumer.vscode-eslint" 
+  ]
+}

@@ -1,19 +1,20 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import {
+  DarkTheme, ThemeProvider
+} from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
+import React, { useEffect } from 'react';
+import FocusNavigationProvider from '$providers/NavigationFocus';
+// import SpaceMono from '../assets/fonts/SpaceMono-Regular.ttf';
+// import { useColorScheme } from '@/hooks/useColorScheme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+const RootLayout = () => {
+  // const colorScheme = useColorScheme();
+  const [loaded, error] = useFonts({});
 
   useEffect(() => {
     if (loaded || error) {
@@ -29,11 +30,25 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <FocusNavigationProvider>
+      <ThemeProvider value={DarkTheme}>
+        <Stack>
+          <Stack.Screen
+            name="index"
+            options={{
+              headerShown: false
+            }}
+          />
+          <Stack.Screen
+            name="+not-found"
+            options={{
+              title: 'Oops!'
+            }}
+          />
+        </Stack>
+      </ThemeProvider>
+    </FocusNavigationProvider>
   );
-}
+};
+
+export default RootLayout;

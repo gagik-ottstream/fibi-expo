@@ -18,17 +18,30 @@
         }
       ],
       "expo-router",
-      "expo-font"
+      [
+        "expo-font",
+        {}
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ]
     ],
     "android": {
       "splash": {
         "image": "./assets/images/splash.png"
-      }
+      },
+      "permissions": ["CAMERA", "RECORD_AUDIO", "WRITE_EXTERNAL_STORAGE"],
+      "package": "com.anonymous.tv"
     },
     "ios": {
       "splash": {
         "image": "./assets/images/splash.png"
-      }
+      },
+      "bundleIdentifier": "com.anonymous.tv"
     },
     "experiments": {
       "typedRoutes": true
