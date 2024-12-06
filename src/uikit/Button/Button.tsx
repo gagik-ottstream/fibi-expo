@@ -38,6 +38,7 @@ const Button =forwardRef<View, ButtonProps>(({
         backgroundColor: value === focusId ? 'rgba(135,135,135,.7)':'rgba(50, 36, 44, 0.7)'
       }]}
       onPress={(e) => {
+        setValue(focusId);
         onPress?.(e);
       }}
       onBlur={() => {

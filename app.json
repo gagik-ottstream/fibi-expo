@@ -39,13 +39,13 @@
         "RECORD_AUDIO",
         "WRITE_EXTERNAL_STORAGE"
       ],
-      "package": "com.anonymous.tv"
+      "package": "com.fibi.tv"
     },
     "ios": {
       "splash": {
         "image": "./assets/images/splash.png"
       },
-      "bundleIdentifier": "com.anonymous.tv"
+      "bundleIdentifier": "com.fibi.tv"
     },
     "experiments": {
       "typedRoutes": true
