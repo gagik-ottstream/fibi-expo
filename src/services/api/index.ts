@@ -45,7 +45,6 @@ class Api {
     if (body) {
       options.body = JSON.stringify(body);
     }
-
     return fetch(URL, options)
       .then((response) => {
         if (!response.ok) throw new Error(response.statusText);

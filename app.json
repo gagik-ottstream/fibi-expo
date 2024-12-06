@@ -34,7 +34,11 @@
       "splash": {
         "image": "./assets/images/splash.png"
       },
-      "permissions": ["CAMERA", "RECORD_AUDIO", "WRITE_EXTERNAL_STORAGE"],
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
       "package": "com.anonymous.tv"
     },
     "ios": {
@@ -48,6 +52,14 @@
     },
     "newArchEnabled": true,
     "name": "tv",
-    "slug": "tv"
+    "slug": "tv",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "03183266-21d3-438c-8d9f-3d857d5f3e21"
+      }
+    }
   }
 }

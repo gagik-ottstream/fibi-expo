@@ -27,7 +27,6 @@ class ChannelsStore {
     runInAction(() => {
       this.isLoading = true;
     });
-
     channelApi
       .getAll()
       .then((res) => {
@@ -37,7 +36,7 @@ class ChannelsStore {
         });
       })
       .catch(() => {
-        // console.log('ERROR', e);
+        console.log('ERROR', e);
       })
       .then(() => {
         runInAction(() => {
@@ -58,7 +57,7 @@ class ChannelsStore {
         });
       })
       .catch(() => {
-        // console.log( 'ERROR', e);
+        console.log('ERROR', e);
       })
       .then(() => {
         runInAction(() => {

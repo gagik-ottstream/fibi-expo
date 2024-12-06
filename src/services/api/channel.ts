@@ -17,7 +17,7 @@ class ChannelApi extends Api {
 
   getChannel(channelId:string){
     return this.get<ChannelUrl>({
-      url: `/${channelId}/url?provider_id=1&client_id=1414141414&device_id=1&expire_at=1785000167&server_id=6`
+      url: `/${channelId}/url?provider_id=6&client_id=1414141414&device_id=1&expire_at=1785000167&server_id=6`
     });
   }
 }
